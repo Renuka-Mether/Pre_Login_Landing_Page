@@ -1,0 +1,74 @@
+@media (max-width:800px){
+    .main-wrapper{
+        max-width: 100%;
+        padding:0 15px 0
+    }
+    .main-wrapper .main-content{
+        max-width: 100%;
+    }
+    .main-wrapper .main-content .para-div>h3{
+        line-height: 1;
+        font-size: 30px;
+    }
+    .main-wrapper .main-content .para-div .chart-content{
+        flex-direction: column;
+    }
+    .main-wrapper .main-content .para-div .chart-content .right-content .fund-listing>li .fund-price{
+        flex: 20%;
+    }
+    .main-wrapper .main-content .para-div .chart-content .pie-content{
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+            dir{
+                width: 100%;
+                height: auto;
+                margin: 0 auto;
+                text-align: center;
+            }
+            svg{
+                width: 100%;
+                margin: 0 auto;
+                height: auto;
+                rect{
+                    width: 100%;
+                    margin: 0 auto;
+                    height: auto;
+                }
+            }
+    }
+    .main-wrapper .main-content .para-div .chart-content .right-content .fund-listing>li .fund-info h3{
+        font-size: 18px;
+    }
+    .main-wrapper .main-content .para-div .listing li .listing-info h3{
+        font-size: 35px;
+    }
+    .main-wrapper .main-content .para-div .listing li .inner-listing h3{
+        font-size: 35px;
+    }
+    .main-wrapper .main-content .para-div .listing li{
+        margin: 0 10px;
+    }
+    .main-wrapper header{
+        flex-direction: column;
+        .logo{
+            text-align: center;
+        }
+    }
+    .main-wrapper .main-content .para-div .chart-content .right-content .left-btn{
+        text-align: center;
+        margin: 10px 0;
+    }
+}   
+@media (min-width:1024px) and (max-width:1366px){
+    .main-wrapper header{
+        max-width: 1250px;
+    }
+    .main-wrapper .main-content{
+        max-width: 1230px;
+    }
+}

@@ -1,0 +1,321 @@
+@import "animate.scss";
+@font-face{
+    font-family: Montserrat-Regular;
+    src:url(../fonts/Montserrat/Regular/Montserrat-Regular.woff);
+    font-family: Montserrat-Light;
+    src:url(../fonts/Montserrat/Regular/Montserrat-Light.woff);
+    font-family: Montserrat-Medium;
+    src:url(../fonts/Montserrat/Regular/Montserrat-Medium.woff);
+}   
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;    
+    font-family: "'Montserrat-Light',sans-serif";
+}
+
+$btn-dark-green: #14a388;
+$btn-light-green: #13bc9c;
+$btn-dark-grey: #425b77;
+
+path {
+    stroke-width: 2;
+}
+.main-wrapper{
+    width: 100%;
+    // max-width: 1200px;
+    margin: 0 auto;
+    header{
+        max-width: 1400px;
+        width: 100%;
+        margin:10px auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px ;
+        background: #efefef;
+        position: relative;
+        box-shadow: 0 3px 7px 0px #0c0303e8;
+        animation: 1s ease-out 0s 1 slideInFromLeft;
+        .logo{
+            // justify-content:  flex-start;
+            width: 100%;
+        }
+        .search{
+            display: flex;
+            // justify-content:  flex-end;
+            position: relative;
+            width: 100%;
+            padding: 10px 0;
+            justify-content: flex-end;
+
+            .search-open{
+                order: 2;
+                padding: 15px;
+                cursor: pointer;
+            }
+            .search-txt{
+                order: 1;
+                width:0%;
+                display: none;
+                border: 0;
+                border-bottom:1px solid #000000;
+                outline: none;
+                padding:5px 10px;
+                background: #efefef;
+                transition: 0.5s;
+
+            }
+        }
+        .search-close{
+            display: none;   
+            order: 2;        
+            padding: 15px;
+            cursor: pointer;
+            &::after{
+                position: absolute;
+                right: 17px;
+                top: 17px;
+                content: ' ';
+                height: 20px;
+                width: 2px;
+                background-color: #333;
+                transform: rotate(-45deg);
+            }
+            &::before{
+                position: absolute;
+                right: 17px;
+                top: 17px;
+                content: ' ';
+                height: 20px;
+                width: 2px;
+                background-color: #333;
+                transform: rotate(45deg);
+            }
+        }
+      
+    }
+    .main-content{
+        background: #ffffff;
+        position: relative;
+        padding: 30px 0 0;
+        max-width: 1200px;
+        margin: 0 auto;
+        .para-div{
+            text-align: center;
+            padding: 10px 0;
+            animation: 1s ease-out 0s 1 slideInFromRight;
+
+            >h3{
+                font-size: 48px;
+                color: #5b5b5b;
+                line-height: 24px;
+                margin:20px 0 10px;
+                font-family: Montserrat-Light;
+                font-weight: normal;
+            }
+            .para-info{
+                font-size:12px;
+                font-family: Montserrat-Light;
+                font-weight: normal;
+                line-height: 1;
+            }
+            .listing{
+                list-style-type: none;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                margin: 10px 0;
+                li{
+                    display: flex;
+                    align-items: center;
+                    margin:10px;
+                    text-align: left;
+                    img{
+                        width: 35px;
+                        height: 35px;
+                    }
+                    .listing-info{
+                        h3{
+                            // margin: 0;
+                            line-height: 24px;
+                            color:#4d4d4d;
+                            font-size: 50px;
+                        }
+                        p{
+                            margin: 0;
+                            color:#4d4d4d;
+                            font-size: 18px;
+                            line-height: 1;
+                        }
+                    }
+                   .inner-listing{
+                    list-style-type: none;
+                    display: flex;
+                    flex-direction: column;
+                    margin:10px;
+                        h3{
+                            font-size: 48px;
+                            color: #5b5b5b;
+                            line-height: 24px;
+                            margin:20px 0 10px;
+                            font-family: Montserrat-Regular;
+                            font-weight: normal;
+                        }
+                        p{
+                            font-size:18px;
+                            font-family: Montserrat-Light;
+                            font-weight: normal;
+                            line-height: 1;
+                        }
+                       li{
+
+                       }
+                   } 
+                }
+            }
+            .chart-content{
+                display: flex;
+                // align-items: center;
+
+                .pie-content{
+                    flex: 40%;
+                    width:400px;
+                    height:400px;
+                    margin: 0 auto;
+                    animation: 2s ease-out 0s 1 slideInFromUp;
+
+                }
+                .right-content{
+                    flex: 60%;
+                    animation: 2s ease-out 0s 1 slideInFromDown;
+
+                    .fund-listing{
+                        list-style-type: none;
+                        position: relative;
+                        >li{
+                            border:1px solid #afa8a8;
+                            background: #ffffff;
+                            position: relative;
+                            display: flex;
+                            width: 100%;
+                            justify-content: flex-end;                            
+                            transition:0.5s;
+                            margin: 10px 0;
+                            cursor: pointer;
+                            .fund-info{
+                                width: 100%;
+                                padding: 10px ;
+                                text-align: left;
+                                flex: 90%;
+                                h3{
+                                    font-size: 20px;
+                                    color:#666666;
+                                    line-height: 1;
+                                    font-family: Montserrat-Medium;
+                                }
+                                .fund-inner-list{
+                                    display: flex;
+                                    position: relative;
+                                    li{
+                                        list-style-type: none;
+                                        padding: 10px 0px 0 20px;
+                                        color:#666666;
+                                        font-size: 16px;
+                                        font-family: Montserrat-Light;
+                                      
+                                    }
+                                    li:nth-child(1){
+                                        list-style-type: none;
+                                        &::before{
+                                            content: '';
+                                            background: #14a388;
+                                            height: 8px;
+                                            width: 8px;
+                                            border-radius: 50%;
+                                            position: absolute;
+                                            left: 7px;
+                                            top: 18px;
+                                         
+                                        }
+                                        
+                                    }
+                                   
+                                }
+                            }
+                           
+                            .fund-price{
+                                // background: $btn-dark-green;                                
+                                display: flex;
+                                align-items: center;
+                                width: 100%;
+                                flex: 15%;
+                                justify-content: center;
+                               
+                                span{
+                                    color: #ffffff;
+                                    font-size: 36px;                                  
+                                    font-family: Montserrat-Medium;
+                                    padding: 0 10px;
+                                }
+                                
+                            }  
+                            .btn-dark-green{
+                                @extend .fund-price;
+                                background: $btn-dark-green;                                
+                            }
+                            .btn-light-green{
+                                @extend .fund-price;
+                                background: $btn-light-green;                                
+                            }
+                            .btn-dark-grey{
+                                @extend .fund-price;
+                                background: $btn-dark-grey;                                
+                            }
+                            &:hover{
+                                border-left: 5px solid #14a388;
+                                box-shadow: 0 3px 7px 0px #0c0303e8;
+                            }
+                        
+                        }
+                    }
+                    .right-text{
+                        text-align: right;
+                        padding-right: 20px;
+                        span{
+                            font-size: 10px;
+                            color:#666666;
+                            font-family: Montserrat-Regular;
+
+                        }
+                    }
+                    .left-btn{
+                        text-align: left;
+                        .fund-btn{
+                            text-align: left;
+                            background: #12d6b0;
+                            padding: 10px 40px;
+                            color: #ffffff;
+                            font-size: 30px;
+                            font-weight: 600;
+                            border: none;
+                            font-family: Montserrat-Medium;
+                            font-weight: 300;
+                            transition: 0.5s;
+                            cursor: pointer;
+                            animation: 4s ease-out 0s 1 BounceInOut;
+
+                            
+                        &:hover{
+                            background: #14a388;
+                            color: #efefef;
+                            box-shadow: 0px 4px 4px -1px #273f6d;
+                        }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
